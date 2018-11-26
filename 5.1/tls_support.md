@@ -7,7 +7,7 @@ contrail-ansible-deployer provisioning scripts.
 
 # 2. Problem statement
 
-Customers require the ability to configure and use TLS 1.3 for contrail services.
+Customers require the ability to configure and use TLS 1.2 for contrail services.
 
 # 3. Proposed solution
 
@@ -19,7 +19,7 @@ In previous versions of Contrail (<= 4.x), the following services supported TLS 
 		Sandesh
 		WebUI
 	
-The above packages need to be upgraded to support the newer version of TLS (1.3). It 
+The above packages need to be upgraded to support the newer version of TLS (1.2). It 
 is also planned to add TLS support to the following external services in 
 Contrail 5.1:
 	
@@ -48,22 +48,22 @@ but again, this may not be possible for non-openstack configurations.
 ## 3.2 XMPP
 Support for TLS 1.0 is available and there is code in contrail-ansible-deployer 
 that configures required knobs when `contrail\_configuration.SSL\_ENABLE` is 
-set to `True`. Packages need to be upgraded to versions that support TLS 1.3.
+set to `True`. Packages need to be upgraded to versions that support TLS 1.2.
 
 ## 3.3 Introspect Service
 Support for TLS 1.0 is available and there is code in contrail-ansible-deployer 
 that configures required knobs when `contrail\_configuration.SSL\_ENABLE` is 
-set to `True`. Packages need to be upgraded to versions that support TLS 1.3.
+set to `True`. Packages need to be upgraded to versions that support TLS 1.2.
 
 ## 3.3 Sandesh
 Support for TLS 1.0 is available and there is code in contrail-ansible-deployer 
 that configures required knobs when `contrail\_configuration.SSL\_ENABLE` is 
-set to `True`. Packages need to be upgraded to versions that support TLS 1.3.
+set to `True`. Packages need to be upgraded to versions that support TLS 1.2.
 
 ## 3.3 WebUI Service
 Support for TLS 1.0 is available and there is code in contrail-ansible-deployer 
 that configures required knobs when `contrail\_configuration.SSL\_ENABLE` is 
-set to `True`. Packages need to be upgraded to versions that support TLS 1.3.
+set to `True`. Packages need to be upgraded to versions that support TLS 1.2.
 
 
 ## 3.5 External services (RabbitMQ, Zookeeper, Kafka, Cassandra, Redis)
@@ -80,7 +80,7 @@ for TLS in the package is relatively very recent, it is proposed to wait till
 the support matures before adopting it.
 
 All the other services listed above have support for TLS but whether they 
-support TLS 1.3 needs to be explored.
+support TLS 1.2 needs to be explored.
 
 # 4. Implementation
 
